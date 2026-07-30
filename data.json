@@ -504,10 +504,10 @@
           ]
         },
         {
-          "key": "protection_from",
-          "label": "Protection from",
-          "title": "Protection from",
-          "icon": "keyword.svg",
+          "key": "protection",
+          "label": "Protection",
+          "title": "Protection",
+          "icon": "protection.png",
           "description": "A permanent with protection from a quality can't be targeted, enchanted, damaged, or blocked by things of that quality.",
           "bullets": [
             "Protection is usually defined by a color, creature type, or quality such as red or creatures.",
