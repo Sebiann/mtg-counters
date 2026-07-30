@@ -511,7 +511,12 @@
           "description": "A permanent with protection from a quality can't be targeted, enchanted, damaged, or blocked by things of that quality.",
           "bullets": [
             "D. E. B. T.",
+<<<<<<< HEAD
             "Damage from [blah] sources is preventedEnchantments and Equipment that are [blah] can't be attached[blah] creatures can't Block itIt can't be the Target of [blah] spells or abilities from [blah] sources."
+=======
+            "Damage from [blah] sources is preventedEnchantments and Equipment that are [blah] can't be attached[blah] creatures can't Block itIt can't be the Target of [blah] spells or abilities from [blah] sources.
+            "
+>>>>>>> 7ed818d (Added: D. E. B. T.)
             "Protection is usually defined by a color, creature type, or quality such as red or creatures.",
             "The protected permanent also can't be enchanted by effects of that quality.",
             "Protection is a strong defensive ability and often makes a card hard to interact with."
