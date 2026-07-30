@@ -1,0 +1,521 @@
+{
+  "sections": [
+    {
+      "type": "turn-flow",
+      "title": "Turn Structure at a Glance",
+      "items": [
+        {
+          "step": "Beginning Phase",
+          "note": "Untap, upkeep, and draw. You ready your board, resolve beginning-of-turn triggers, then draw for turn."
+        },
+        {
+          "step": "Main Phase One",
+          "note": "Play a land (if available), cast spells, and activate abilities before combat."
+        },
+        {
+          "step": "Combat Phase",
+          "note": "Beginning of combat, declare attackers, declare blockers, combat damage, and end of combat."
+        },
+        {
+          "step": "Main Phase Two",
+          "note": "A second main phase for post-combat plays, using any remaining mana and resources."
+        },
+        {
+          "step": "Ending Phase",
+          "note": "End step and cleanup. End-step triggers resolve, then you discard to hand size and remove marked damage."
+        }
+      ]
+    },
+    {
+      "type": "keywords",
+      "title": "Actions",
+      "items": [
+        {
+          "key": "explore",
+          "label": "Explore",
+          "title": "Explore",
+          "icon": "explore.png",
+          "description": "Reveal the top card of your library. If it's a land card, put it into your hand. Otherwise put a +1/+1 counter on this creature, then you may put the revealed card into your graveyard."
+        },
+        {
+          "key": "scry",
+          "label": "Scry",
+          "title": "Scry",
+          "icon": "keyword.svg",
+          "description": "Look at the top x cards of your library, then put any number of them on the bottom and the rest back on top in any order."
+        },
+        {
+          "key": "surveil",
+          "label": "Surveil",
+          "title": "Surveil",
+          "icon": "surveil.png",
+          "description": "Look at the top x cards of your library, then put any number of them into your graveyard and the rest back on top in any order."
+        }
+      ]
+    },
+    {
+      "type": "keywords",
+      "title": "Core Creature Abilities",
+      "items": [
+        {
+          "key": "copy",
+          "label": "Copy",
+          "title": "Copy",
+          "icon": "copy.svg",
+          "description": "Copies replicate an existing permanent or spell exactly, including its characteristics and abilities.",
+          "bullets": [
+            "Copies do not copy the original's counters, attachments, or temporary effects unless stated.",
+            "Some copy effects create tokens, while others do not; follow the exact card text.",
+            "If copying a creature, the copy uses the copiable values of the chosen object.",
+            "If you copy a permanent that's a copy of something else, you copy the current state of the first copy."
+          ]
+        },
+        {
+          "key": "deathtouch",
+          "label": "Deathtouch",
+          "title": "Deathtouch",
+          "icon": "deathtouch.png",
+          "description": "A creature with deathtouch deals lethal damage with any amount of damage, even 1.",
+          "bullets": [
+            "Any nonzero amount of combat damage assigned to a creature by a source with deathtouch is considered lethal damage.",
+            "Deathtouch does not trigger on non-combat damage unless the source explicitly says so, but the rules actually apply to any damage from a source with deathtouch.",
+            "Multiple instances of deathtouch are redundant."
+          ]
+        },
+        {
+          "key": "defender",
+          "label": "Defender",
+          "title": "Defender",
+          "icon": "defender.png",
+          "description": "A creature with defender can't attack.",
+          "bullets": [
+            "Defender doesn't prevent the creature from blocking - it's purely an attack restriction.",
+            "Creatures with defender can still use abilities that cost tapping.",
+            "If a creature loses defender via an effect, it can attack normally."
+          ]
+        },
+        {
+          "key": "double_strike",
+          "label": "Double Strike",
+          "title": "Double Strike",
+          "icon": "double_strike.png",
+          "description": "A creature with double strike deals combat damage in both the first strike and normal combat damage steps.",
+          "bullets": [
+            "The creature effectively hits twice - once during first strike damage and once during regular damage.",
+            "Double strike includes first strike; the creature does not get a third hit.",
+            "If blocked by a creature that dies in the first strike step, the double striker still deals its second instance of damage to the player if it has trample."
+          ]
+        },
+        {
+          "key": "first_strike",
+          "label": "First Strike",
+          "title": "First Strike",
+          "icon": "first_strike.png",
+          "description": "A creature with first strike deals combat damage before creatures without first strike.",
+          "bullets": [
+            "Combat damage is dealt in two steps: first strikers deal damage, then everyone else does.",
+            "If a first striker kills its blocker, the blocker deals no combat damage back.",
+            "Granting first strike after the first strike damage step doesn't retroactively deal damage."
+          ]
+        },
+        {
+          "key": "flying",
+          "label": "Flying",
+          "title": "Flying",
+          "icon": "flying.png",
+          "description": "A creature with flying can't be blocked except by creatures with flying or reach.",
+          "bullets": [
+            "Flying is an evasion ability that restricts blocking.",
+            "Creatures without flying or reach cannot block a creature with flying.",
+            "Multiple instances of flying are redundant."
+          ]
+        },
+        {
+          "key": "goad",
+          "label": "Goad",
+          "title": "Goad",
+          "icon": "goad.svg",
+          "description": "A goaded creature attacks each combat if able, and attacks a player other than the goader if able.",
+          "bullets": [
+            "Goaded creatures must attack - they can't choose to stay back.",
+            "If the goaded creature can't attack the goading player due to a restriction, it attacks another player or a planeswalker.",
+            "If goaded by multiple players, the creature avoids all of them if able.",
+            "Goad lasts until your next turn."
+          ]
+        },
+        {
+          "key": "haste",
+          "label": "Haste",
+          "title": "Haste",
+          "icon": "haste.png",
+          "description": "A creature with haste can attack and tap on the turn it enters the battlefield.",
+          "bullets": [
+            "Normally, creatures can't attack or use tap abilities the turn they come under your control, also known as summoning sickness.",
+            "Haste only affects the can't attack/tap restriction - it doesn't prevent other restrictions.",
+            "Losing haste after attacking doesn't remove the creature from combat."
+          ]
+        },
+        {
+          "key": "indestructible",
+          "label": "Indestructible",
+          "title": "Indestructible",
+          "icon": "indestructible.png",
+          "description": "A permanent with indestructible can't be destroyed.",
+          "bullets": [
+            "Effects that say destroy don't affect indestructible permanents.",
+            "Lethal damage and damage from a source with deathtouch don't destroy indestructible creatures, but the damage stays marked on them.",
+            "Sacrificing or exiling an indestructible permanent still works - those aren't destruction."
+          ]
+        },
+        {
+          "key": "lifelink",
+          "label": "Lifelink",
+          "title": "Lifelink",
+          "icon": "lifelink.png",
+          "description": "Whenever a creature with lifelink deals damage, its controller gains that much life.",
+          "bullets": [
+            "Lifelink works with combat damage and noncombat damage, as long as the source is the one with lifelink.",
+            "The life gain happens when the damage is dealt, not when the creature is later removed from battle.",
+            "Multiple instances of lifelink are redundant and do not increase the amount of life gained.",
+            "If a 5/5 creature with lifelink deals damage, its controller gains 5 life no matter the amount of defense the blocker has."
+          ]
+        },
+        {
+          "key": "lore",
+          "label": "Lore Counter",
+          "title": "Lore Counters",
+          "icon": "lore.svg",
+          "description": "Sagas use lore counters to track chapters. A Saga enters with a lore counter, and its controller adds one at the beginning of their precombat main phase.",
+          "bullets": [
+            "Chapter abilities trigger based on the number of lore counters - Chapter I triggers on the first, Chapter II on the second, and so on.",
+            "Once the final chapter resolves, the Saga is sacrificed as a state-based action.",
+            "Lore counters can be added or removed by other card effects to speed up or reset Sagas."
+          ]
+        },
+        {
+          "key": "menace",
+          "label": "Menace",
+          "title": "Menace",
+          "icon": "menace.png",
+          "description": "A creature with menace can't be blocked except by two or more creatures.",
+          "bullets": [
+            "One blocker is not enough - at least two creatures must block it.",
+            "If one of the two blockers is removed before damage, the block is still legal and the creature remains blocked.",
+            "Multiple instances of menace are redundant - it still only needs two blockers."
+          ]
+        },
+        {
+          "key": "reach",
+          "label": "Reach",
+          "title": "Reach",
+          "icon": "reach.png",
+          "description": "A creature with reach can block creatures with flying.",
+          "bullets": [
+            "Reach allows a creature to block attackers with flying that it otherwise couldn't.",
+            "Reach does not grant flying - the creature still can't be used to satisfy flying requirements.",
+            "Multiple instances of reach are redundant."
+          ]
+        },
+        {
+          "key": "summoning_sickness",
+          "label": "Summoning Sickness",
+          "title": "Summoning Sickness",
+          "icon": "summoning_sickness.png",
+          "description": "A creature can't attack or use tap abilities the turn it comes under your control, unless it has haste.",
+          "bullets": [
+            "Summoning sickness is not a keyword ability - it's a game rule that applies to all creatures.",
+            "It only affects attacking and abilities with the tap symbol - untap abilities and non-tap activated abilities work fine.",
+            "A creature that has been under your control since the beginning of your most recent turn is no longer sick.",
+            "Gaining control of an opponent's creature gives it summoning sickness unless it has haste."
+          ]
+        },
+        {
+          "key": "trample",
+          "label": "Trample",
+          "title": "Trample",
+          "icon": "trample.png",
+          "description": "Excess combat damage dealt by a creature with trample to a blocking creature carries over to the player or planeswalker it's attacking.",
+          "bullets": [
+            "You must assign at least lethal damage to all blockers before assigning leftover damage to the player or planeswalker.",
+            "If no creatures block, all damage goes to the player or planeswalker.",
+            "Trample works with deathtouch - any nonzero damage is considered lethal, so the rest tramples over."
+          ]
+        },
+        {
+          "key": "vigilance",
+          "label": "Vigilance",
+          "title": "Vigilance",
+          "icon": "vigilance.png",
+          "description": "Attacking doesn't cause a creature with vigilance to tap.",
+          "bullets": [
+            "The creature still declares an attack as normal - it just doesn't tap when doing so.",
+            "This means it can both attack and block on subsequent turns without needing to untap.",
+            "Vigilance only applies to attacking, not to other tap-based abilities."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "keywords",
+      "title": "Protection & Counters",
+      "items": [
+        {
+          "key": "hexproof",
+          "label": "Hexproof",
+          "title": "Hexproof",
+          "icon": "hexproof.png",
+          "description": "A permanent with hexproof can't be the target of spells or abilities your opponents control.",
+          "bullets": [
+            "Only opponent spells and abilities are affected - you can still target your own hexproof permanents.",
+            "Non-targeting effects like board wipes still affect hexproof creatures.",
+            "Aura spells on the stack don't target, so an aura entering the battlefield attached to a hexproof creature works if it wasn't cast targeting it."
+          ]
+        },
+        {
+          "key": "hexproof_black",
+          "label": "Hexproof (Black)",
+          "title": "Hexproof from Black",
+          "icon": "hexproof_black.png",
+          "description": "A permanent with protection from black can't be blocked, targeted, dealt damage, enchanted, or equipped by black sources.",
+          "bullets": [
+            "Protection is color-specific - effects from other colors can still affect it.",
+            "All damage from black sources to this permanent is prevented.",
+            "Black creatures can't block this permanent, and black Auras or Equipment can't stay attached to it."
+          ]
+        },
+        {
+          "key": "hexproof_blue",
+          "label": "Hexproof (Blue)",
+          "title": "Hexproof from Blue",
+          "icon": "hexproof_blue.png",
+          "description": "A permanent with protection from blue can't be blocked, targeted, dealt damage, enchanted, or equipped by blue sources.",
+          "bullets": [
+            "Protection is color-specific - effects from other colors can still affect it.",
+            "All damage from blue sources to this permanent is prevented.",
+            "Blue creatures can't block this permanent, and blue Auras or Equipment can't stay attached to it."
+          ]
+        },
+        {
+          "key": "hexproof_green",
+          "label": "Hexproof (Green)",
+          "title": "Hexproof from Green",
+          "icon": "hexproof_green.png",
+          "description": "A permanent with protection from green can't be blocked, targeted, dealt damage, enchanted, or equipped by green sources.",
+          "bullets": [
+            "Protection is color-specific - effects from other colors can still affect it.",
+            "All damage from green sources to this permanent is prevented.",
+            "Green creatures can't block this permanent, and green Auras or Equipment can't stay attached to it."
+          ]
+        },
+        {
+          "key": "hexproof_red",
+          "label": "Hexproof (Red)",
+          "title": "Hexproof from Red",
+          "icon": "hexproof_red.png",
+          "description": "A permanent with protection from red can't be blocked, targeted, dealt damage, enchanted, or equipped by red sources.",
+          "bullets": [
+            "Protection is color-specific - effects from other colors can still affect it.",
+            "All damage from red sources to this permanent is prevented.",
+            "Red creatures can't block this permanent, and red Auras or Equipment can't stay attached to it."
+          ]
+        },
+        {
+          "key": "hexproof_white",
+          "label": "Hexproof (White)",
+          "title": "Hexproof from White",
+          "icon": "hexproof_white.png",
+          "description": "A permanent with protection from white can't be blocked, targeted, dealt damage, enchanted, or equipped by white sources.",
+          "bullets": [
+            "Protection is color-specific - effects from other colors can still affect it.",
+            "All damage from white sources to this permanent is prevented.",
+            "White creatures can't block this permanent, and white Auras or Equipment can't stay attached to it."
+          ]
+        },
+        {
+          "key": "poison",
+          "label": "Poison",
+          "title": "Poison Counter",
+          "icon": "poison.svg",
+          "description": "A player who has ten or more poison counters loses the game.",
+          "bullets": [
+            "Poison counters are given to players, not creatures.",
+            "Creatures with toxic or toxic X deal X poison counters in addition to normal combat damage.",
+            "Poison counters persist - there's no natural way to remove them outside of specific card effects.",
+            "Infect damage gives poison counters equal to the damage dealt instead of regular damage."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "keywords",
+      "title": "Restrictions & Effects",
+      "items": [
+        {
+          "key": "cant_attack",
+          "label": "Can't Attack",
+          "title": "Can't Attack",
+          "icon": "cant_attack.png",
+          "description": "The creature is unable to declare an attack.",
+          "bullets": [
+            "This can be caused by abilities like defender, or by external effects that prohibit attacking.",
+            "If the restriction is removed, for example if defender is stripped, the creature can attack normally.",
+            "Effects that force a creature to attack won't override a can't attack restriction - restrictions win over requirements."
+          ]
+        },
+        {
+          "key": "cant_block",
+          "label": "Can't Block",
+          "title": "Can't Block",
+          "icon": "cant_block.png",
+          "description": "The creature is unable to declare a block.",
+          "bullets": [
+            "This is typically imposed by another creature's ability, for example creatures your opponents control can't block.",
+            "If the effect ends before the declare blockers step, the creature can block normally.",
+            "Like with attacking, can't block restrictions override effects that would force a creature to block."
+          ]
+        },
+        {
+          "key": "finality",
+          "label": "Finality",
+          "title": "Finality",
+          "icon": "finality.png",
+          "description": "If a permanent with finality would be put into a graveyard from the battlefield, exile it instead.",
+          "bullets": [
+            "This is a replacement effect, not a trigger - it modifies where the permanent goes.",
+            "Finality prevents reanimation strategies - the card can't be brought back from the graveyard because it never gets there.",
+            "If the permanent is a token, it can be exiled, then it ceases to exist as a state-based action."
+          ]
+        },
+        {
+          "key": "shield",
+          "label": "Shield Counter",
+          "title": "Shield Counter",
+          "icon": "shield.svg",
+          "description": "If a permanent with a shield counter would be dealt damage or destroyed, remove a shield counter from it instead.",
+          "bullets": [
+            "A shield counter protects that permanent from one destruction event or one damage event.",
+            "When this happens, one shield counter is removed instead of that event occurring.",
+            "Multiple shield counters protect the permanent multiple times.",
+            "Shield counters are physical counters placed on the permanent; they can be added or removed by various card effects.",
+            "This differs from ward - ward counters an opponent's spell or ability targeting the permanent, while shield protects from damage and destruction effects."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "keywords",
+      "title": "Spell & Card Mechanics",
+      "items": [
+        {
+          "key": "cascade",
+          "label": "Cascade",
+          "title": "Cascade",
+          "icon": "keyword.svg",
+          "description": "When you cast a spell with cascade, you exile cards from the top of your library until you exile a card with a lower mana value than the spell.",
+          "bullets": [
+            "You may cast the exiled card without paying its mana cost.",
+            "Any cards exiled this way are put into your graveyard after the spell resolves, unless an effect changes that.",
+            "Cascade only applies when the spell is cast, not when it is later copied or replayed."
+          ]
+        },
+        {
+          "key": "crew",
+          "label": "Crew",
+          "title": "Crew",
+          "icon": "keyword.svg",
+          "description": "Crew is an activated ability of Vehicles. You tap untapped creatures you control with total power N or more to pay the crew cost.",
+          "bullets": [
+            "You must pay the crew cost with untapped creatures you control.",
+            "Only creatures that are untapped and controlled by you can be used to pay the cost.",
+            "Once a vehicle is crewed, it can attack and block as a creature for the turn's duration."
+          ]
+        },
+        {
+          "key": "echo",
+          "label": "Echo",
+          "title": "Echo",
+          "icon": "keyword.svg",
+          "description": "Echo means that at the beginning of your upkeep, if this permanent came under your control since the beginning of your last upkeep, you sacrifice it unless you pay its echo cost.",
+          "bullets": [
+            "Echo checks at your upkeep, not while casting the spell.",
+            "If you don't pay, you sacrifice that permanent.",
+            "Echo applies once per permanent entering under your control in that window."
+          ]
+        },
+        {
+          "key": "flash",
+          "label": "Flash",
+          "title": "Flash",
+          "icon": "flash.png",
+          "description": "A spell with flash can be cast at any time you could cast an instant.",
+          "bullets": [
+            "Flash lets you play cards during your opponent's turn.",
+            "This is commonly used to surprise opponents with instant-speed interaction or threats."
+          ]
+        },
+        {
+          "key": "flashback",
+          "label": "Flashback",
+          "title": "Flashback",
+          "icon": "flashback.png",
+          "description": "Flashback lets you cast a card from your graveyard for its flashback cost.",
+          "bullets": [
+            "The card must be in your graveyard to use flashback.",
+            "You still pay the listed flashback cost when casting it this way.",
+            "If a spell cast with flashback would leave the stack, exile it instead of putting it anywhere else."
+          ]
+        },
+        {
+          "key": "foretell",
+          "label": "Foretell",
+          "title": "Foretell",
+          "icon": "foretell.png",
+          "description": "During your turn, you may pay {2} and exile a card with foretell from your hand face down. On a later turn, you may cast it from exile for its foretell cost.",
+          "bullets": [
+            "When you foretell a card, you exile it face down as a separate game object and retain knowledge of what it is.",
+            "On a later turn, you can cast the foretold card from exile by paying its foretell cost instead of its normal mana cost.",
+            "The foretell cost is typically lower than the card's normal mana cost, allowing you to play cards ahead of tempo.",
+            "You can take the foretell special action only once each turn.",
+            "Forgetting about a foretold card, for example losing track of which turn it was foretold, doesn't prevent you from casting it later."
+          ]
+        },
+        {
+          "key": "kicker",
+          "label": "Kicker",
+          "title": "Kicker",
+          "icon": "kicker.png",
+          "description": "Kicker lets you pay an additional cost as you cast a spell to get a bonus effect.",
+          "bullets": [
+            "The kicker cost is chosen by the card and is paid when the spell is cast.",
+            "If you pay it, the spell gains an extra effect printed on the card.",
+            "Different cards use kicker for different bonuses, so the exact effect depends on the card."
+          ]
+        },
+        {
+          "key": "mutate",
+          "label": "Mutate",
+          "title": "Mutate",
+          "icon": "mutate.png",
+          "description": "Mutate lets you cast a creature spell for its mutate cost targeting a non-Human creature you own. If it resolves, the cards merge into one creature.",
+          "bullets": [
+            "You choose whether the new card goes on top or underneath.",
+            "The merged creature has the characteristics of the top card and abilities from all cards in the pile.",
+            "If the merged creature leaves the battlefield, each card goes to the appropriate zone individually."
+          ]
+        },
+        {
+          "key": "protection_from",
+          "label": "Protection from",
+          "title": "Protection from",
+          "icon": "keyword.svg",
+          "description": "A permanent with protection from a quality can't be targeted, enchanted, damaged, or blocked by things of that quality.",
+          "bullets": [
+            "Protection is usually defined by a color, creature type, or quality such as red or creatures.",
+            "The protected permanent also can't be enchanted by effects of that quality.",
+            "Protection is a strong defensive ability and often makes a card hard to interact with."
+          ]
+        }
+      ]
+    }
+  ]
+}
