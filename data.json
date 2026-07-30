@@ -414,7 +414,7 @@
           "description": "When you cast a spell with cascade, you exile cards from the top of your library until you exile a card with a lower mana value than the spell.",
           "bullets": [
             "You may cast the exiled card without paying its mana cost.",
-            "Any cards exiled this way are put into your graveyard after the spell resolves, unless an effect changes that.",
+            "Any cards exiled this way (that weren't cast) are put under your library in a random order after the spell resolves, unless an effect changes that.",
             "Cascade only applies when the spell is cast, not when it is later copied or replayed."
           ]
         },
