@@ -18,139 +18,400 @@
             <h1>Magic Keywords Reference</h1>
         </header>
         <main>
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="lifelink">
                 <img src="./img/lifelink.png" alt="Lifelink icon">
-                Lifelink
+                <span>Lifelink <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="lifelink">
+                <h3>Lifelink</h3>
+                <p>Detailed rules text...</p>
+                <ul><li>Ruling 1</li><li>Ruling 2</li></ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="deathtouch">
                 <img src="./img/deathtouch.png" alt="Deathtouch icon">
-                Deathtouch
+                <span>Deathtouch <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="deathtouch">
+                <h3>Deathtouch</h3>
+                <p>A creature with deathtouch deals lethal damage with any amount of damage, even 1.</p>
+                <ul>
+                    <li>Any nonzero amount of combat damage assigned to a creature by a source with deathtouch is considered lethal damage.</li>
+                    <li>Deathtouch doesn't trigger on non-combat damage unless the source explicitly says so—but the rules actually apply to any damage from a source with deathtouch.</li>
+                    <li>Multiple instances of deathtouch are redundant.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="flying">
                 <img src="./img/flying.png" alt="Flying icon">
-                Flying
+                <span>Flying <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="flying">
+                <h3>Flying</h3>
+                <p>A creature with flying can't be blocked except by creatures with flying or reach.</p>
+                <ul>
+                    <li>Flying is an evasion ability that restricts blocking.</li>
+                    <li>Creatures without flying or reach cannot block a creature with flying.</li>
+                    <li>Multiple instances of flying are redundant.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="reach">
                 <img src="./img/reach.png" alt="Reach icon">
-                Reach
+                <span>Reach <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="reach">
+                <h3>Reach</h3>
+                <p>A creature with reach can block creatures with flying.</p>
+                <ul>
+                    <li>Reach allows a creature to block attackers with flying that it otherwise couldn't.</li>
+                    <li>Reach does not grant flying—the creature still can't be used to satisfy "flying" requirements.</li>
+                    <li>Multiple instances of reach are redundant.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="first_strike">
                 <img src="./img/first_strike.png" alt="First Strike icon">
-                First Strike
+                <span>First Strike <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="first_strike">
+                <h3>First Strike</h3>
+                <p>A creature with first strike deals combat damage before creatures without first strike.</p>
+                <ul>
+                    <li>Combat damage is dealt in two steps: first strikers deal damage, then everyone else does.</li>
+                    <li>If a first striker kills its blocker, the blocker deals no combat damage back.</li>
+                    <li>Granting first strike after the first strike damage step doesn't retroactively deal damage.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="double_strike">
                 <img src="./img/double_strike.png" alt="Double Strike icon">
-                Double Strike
+                <span>Double Strike <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="double_strike">
+                <h3>Double Strike</h3>
+                <p>A creature with double strike deals combat damage in both the first strike and normal combat damage steps.</p>
+                <ul>
+                    <li>The creature effectively hits twice—once during first strike damage and once during regular damage.</li>
+                    <li>Double strike includes first strike; the creature does not get a third hit.</li>
+                    <li>If blocked by a creature that dies in the first strike step, the double striker still deals its second instance of damage to the player (if it has trample).</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="indestructible">
                 <img src="./img/indestructible.png" alt="Indestructible icon">
-                Indestructible
+                <span>Indestructible <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="indestructible">
+                <h3>Indestructible</h3>
+                <p>A permanent with indestructible can't be destroyed.</p>
+                <ul>
+                    <li>Effects that say "destroy" don't affect indestructible permanents.</li>
+                    <li>Lethal damage and damage from a source with deathtouch don't destroy indestructible creatures, but the damage stays marked on them.</li>
+                    <li>Sacrificing or exiling an indestructible permanent still works—those aren't destruction.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="hexproof">
                 <img src="./img/hexproof.png" alt="Hexproof icon">
-                Hexproof
+                <span>Hexproof <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="hexproof">
+                <h3>Hexproof</h3>
+                <p>A permanent with hexproof can't be the target of spells or abilities your opponents control.</p>
+                <ul>
+                    <li>Only opponent spells and abilities are affected—you can still target your own hexproof permanents.</li>
+                    <li>Non-targeting effects (like board wipes) still affect hexproof creatures.</li>
+                    <li>Aura spells on the stack don't target, so an aura entering the battlefield attached to a hexproof creature works if it wasn't cast targeting it.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="hexproof_white">
                 <img src="./img/hexproof_white.png" alt="Hexproof White icon">
-                Hexproof (White)
+                <span>Hexproof (White) <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="hexproof_white">
+                <h3>Hexproof from White</h3>
+                <p>This permanent can't be the target of white spells or abilities your opponents control, or of white sources your opponents control.</p>
+                <ul>
+                    <li>Protection is color-specific—spells of other colors can still target it.</li>
+                    <li>Prevents all damage from white sources, not just targeting.</li>
+                    <li>White creatures can't block this permanent.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="hexproof_red">
                 <img src="./img/hexproof_red.png" alt="Hexproof Red icon">
-                Hexproof (Red)
+                <span>Hexproof (Red) <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="hexproof_red">
+                <h3>Hexproof from Red</h3>
+                <p>This permanent can't be the target of red spells or abilities your opponents control, or of red sources your opponents control.</p>
+                <ul>
+                    <li>Protection is color-specific—spells of other colors can still target it.</li>
+                    <li>Prevents all damage from red sources, not just targeting.</li>
+                    <li>Red creatures can't block this permanent.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="hexproof_green">
                 <img src="./img/hexproof_green.png" alt="Hexproof Green icon">
-                Hexproof (Green)
+                <span>Hexproof (Green) <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="hexproof_green">
+                <h3>Hexproof from Green</h3>
+                <p>This permanent can't be the target of green spells or abilities your opponents control, or of green sources your opponents control.</p>
+                <ul>
+                    <li>Protection is color-specific—spells of other colors can still target it.</li>
+                    <li>Prevents all damage from green sources, not just targeting.</li>
+                    <li>Green creatures can't block this permanent.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="hexproof_blue">
                 <img src="./img/hexproof_blue.png" alt="Hexproof Blue icon">
-                Hexproof (Blue)
+                <span>Hexproof (Blue) <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="hexproof_blue">
+                <h3>Hexproof from Blue</h3>
+                <p>This permanent can't be the target of blue spells or abilities your opponents control, or of blue sources your opponents control.</p>
+                <ul>
+                    <li>Protection is color-specific—spells of other colors can still target it.</li>
+                    <li>Prevents all damage from blue sources, not just targeting.</li>
+                    <li>Blue creatures can't block this permanent.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="hexproof_black">
                 <img src="./img/hexproof_black.png" alt="Hexproof Black icon">
-                Hexproof (Black)
+                <span>Hexproof (Black) <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="hexproof_black">
+                <h3>Hexproof from Black</h3>
+                <p>This permanent can't be the target of black spells or abilities your opponents control, or of black sources your opponents control.</p>
+                <ul>
+                    <li>Protection is color-specific—spells of other colors can still target it.</li>
+                    <li>Prevents all damage from black sources, not just targeting.</li>
+                    <li>Black creatures can't block this permanent.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="poison">
                 <img src="./img/poison.svg" alt="Poison icon">
-                Poison
+                <span>Poison <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="poison">
+                <h3>Poison Counters</h3>
+                <p>A player who has ten or more poison counters loses the game.</p>
+                <ul>
+                    <li>Poison counters are given to players, not creatures.</li>
+                    <li>Creatures with toxic/toxic X deal X poison counters in addition to normal combat damage.</li>
+                    <li>Poison counters persist—there's no natural way to remove them outside of specific card effects.</li>
+                    <li>Infect damage gives poison counters equal to the damage dealt instead of regular damage.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="trample">
                 <img src="./img/trample.png" alt="Trample icon">
-                Trample
+                <span>Trample <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="trample">
+                <h3>Trample</h3>
+                <p>Excess combat damage dealt by a creature with trample to a blocking creature carries over to the player or planeswalker it's attacking.</p>
+                <ul>
+                    <li>You must assign at least lethal damage to all blockers before assigning leftover damage to the player/planeswalker.</li>
+                    <li>If no creatures block, all damage goes to the player/planeswalker.</li>
+                    <li>Trample works with deathtouch—any nonzero damage is considered lethal, so the rest tramples over.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="haste">
                 <img src="./img/haste.png" alt="Haste icon">
-                Haste
+                <span>Haste <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="haste">
+                <h3>Haste</h3>
+                <p>A creature with haste can attack and tap on the turn it enters the battlefield.</p>
+                <ul>
+                    <li>Normally, creatures can't attack or use tap abilities the turn they come under your control ("summoning sickness").</li>
+                    <li>Haste only affects the "can't attack/tap" restriction—it doesn't prevent other restrictions.</li>
+                    <li>Losing haste after attacking doesn't remove the creature from combat.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="menace">
                 <img src="./img/menace.png" alt="Menace icon">
-                Menace
+                <span>Menace <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="menace">
+                <h3>Menace</h3>
+                <p>A creature with menace can't be blocked except by two or more creatures.</p>
+                <ul>
+                    <li>One blocker is not enough—at least two creatures must block it.</li>
+                    <li>If one of the two blockers is removed before damage, the block is still legal (the creature remains blocked).</li>
+                    <li>Multiple instances of menace are redundant—still just needs two blockers.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="summoning_sickness">
                 <img src="./img/summoning_sickness.png" alt="Summoning Sickness icon">
-                Summoning Sickness
+                <span>Summoning Sickness <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="summoning_sickness">
+                <h3>Summoning Sickness</h3>
+                <p>A creature can't attack or use tap abilities the turn it comes under your control, unless it has haste.</p>
+                <ul>
+                    <li>Summoning sickness is not a keyword ability—it's a game rule that applies to all creatures.</li>
+                    <li>It only affects attacking and abilities with the tap symbol—untap abilities and non-tap activated abilities work fine.</li>
+                    <li>A creature that has been under your control since the beginning of your most recent turn is no longer "sick."</li>
+                    <li>Gaining control of an opponent's creature gives it summoning sickness (unless it has haste).</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="goad">
                 <img src="./img/goad.svg" alt="Goad icon">
-                Goad
+                <span>Goad <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="goad">
+                <h3>Goad</h3>
+                <p>A goaded creature attacks each combat if able, and attacks a player other than the goader if able.</p>
+                <ul>
+                    <li>Goaded creatures must attack—they can't choose to stay back.</li>
+                    <li>If the goaded creature can't attack the goading player (e.g., due to a restriction), it attacks another player or a planeswalker.</li>
+                    <li>If goaded by multiple players, the creature avoids all of them if able.</li>
+                    <li>Goad lasts until your next turn.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="defender">
                 <img src="./img/defender.png" alt="Defender icon">
-                Defender
+                <span>Defender <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="defender">
+                <h3>Defender</h3>
+                <p>A creature with defender can't attack.</p>
+                <ul>
+                    <li>Defender doesn't prevent the creature from blocking—it's purely an attack restriction.</li>
+                    <li>Creatures with defender can still use abilities that cost tapping.</li>
+                    <li>If a creature loses defender (via an effect), it can attack normally.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="vigilance">
                 <img src="./img/vigilance.png" alt="Vigilance icon">
-                Vigilance
+                <span>Vigilance <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="vigilance">
+                <h3>Vigilance</h3>
+                <p>Attacking doesn't cause a creature with vigilance to tap.</p>
+                <ul>
+                    <li>The creature still declares an attack as normal—it just doesn't tap when doing so.</li>
+                    <li>This means it can both attack and block on subsequent turns without needing to untap.</li>
+                    <li>Vigilance only applies to attacking, not to other tap-based abilities.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="lore">
                 <img src="./img/lore.svg" alt="Lore Counter icon">
-                Lore Counter
+                <span>Lore Counter <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="lore">
+                <h3>Lore Counters</h3>
+                <p>Sagas are enchantments that gain a lore counter at the beginning of your end step, triggering chapter abilities.</p>
+                <ul>
+                    <li>Chapter abilities trigger based on the number of lore counters—Chapter I triggers on the first, Chapter II on the second, etc.</li>
+                    <li>Once the final chapter resolves, the Saga is sacrificed as a state-based action.</li>
+                    <li>Lore counters can be added or removed by other card effects to speed up or reset Sagas.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="copy">
                 <img src="./img/copy.svg" alt="Copy icon">
-                Copy
+                <span>Copy <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="copy">
+                <h3>Copy</h3>
+                <p>Copies replicate an existing permanent or spell exactly—including its characteristics and abilities.</p>
+                <ul>
+                    <li>Copies don't copy the original's counters, attachments, or temporary effects unless stated.</li>
+                    <li>If copying a creature, the copy is not a token unless the effect says so—it enters as a duplicate.</li>
+                    <li>Most copies are tokens created by the copy effect itself.</li>
+                    <li>If you copy a permanent that's a copy of something else, you copy the current state of the first copy.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="cant_attack">
                 <img src="./img/cant_attack.png" alt="Can't Attack icon">
-                Can't Attack
+                <span>Can't Attack <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="cant_attack">
+                <h3>Can't Attack</h3>
+                <p>The creature is unable to declare an attack.</p>
+                <ul>
+                    <li>This can be caused by abilities like defender, or by external effects that prohibit attacking.</li>
+                    <li>If the restriction is removed (e.g., defender is stripped), the creature can attack normally.</li>
+                    <li>Effects that force a creature to attack won't override a "can't attack" restriction—restrictions win over requirements.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="cant_block">
                 <img src="./img/cant_block.png" alt="Can't Block icon">
-                Can't Block
+                <span>Can't Block <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="cant_block">
+                <h3>Can't Block</h3>
+                <p>The creature is unable to declare a block.</p>
+                <ul>
+                    <li>This is typically imposed by another creature's ability (e.g., "creatures your opponents control can't block").</li>
+                    <li>If the effect ends before the declare blockers step, the creature can block normally.</li>
+                    <li>Like with attacking, "can't block" restrictions override effects that would force a creature to block.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="shield">
                 <img src="./img/shield.svg" alt="Shield icon">
-                Shield
+                <span>Shield Counter <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="shield">
+                <h3>Shield Counter</h3>
+                <p>If a permanent with a shield counter would be destroyed or deal damage to a player, remove a shield counter instead.</p>
+                <ul>
+                    <li>A shield counter prevents damage from being dealt to a player and protects the permanent from being destroyed once.</li>
+                    <li>The shield counter is removed when either of these effects happen.</li>
+                    <li>Multiple shield counters protect the permanent multiple times.</li>
+                    <li>Shield counters are physical counters placed on the permanent—they can be added or removed by various card effects.</li>
+                    <li>This differs from Ward—Ward counters an opponent's spell/ability targeting the permanent, while Shield protects from damage/destruction effects.</li>
+                </ul>
             </div>
 
-            <div class="keyword">
+            <div class="keyword-row" data-keyword="finality">
                 <img src="./img/finality.png" alt="Finality icon">
-                Finality
+                <span>Finality <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="finality">
+                <h3>Finality</h3>
+                <p>If a permanent with finality would be put into a graveyard from the battlefield, exile it instead.</p>
+                <ul>
+                    <li>This is a replacement effect, not a trigger—it modifies where the permanent goes.</li>
+                    <li>Finality prevents reanimation strategies—the card can't be brought back from the graveyard because it never gets there.</li>
+                    <li>If the permanent is token, it ceases to exist instead (tokens can't be exiled as objects, they just vanish).</li>
+                </ul>
+            </div>
+            <div class="keyword-row" data-keyword="foretell">
+                <img src="./img/foretell.png" alt="Foretell icon">
+                <span>Foretell <span class="expand-indicator">▸</span></span>
+            </div>
+            <div class="keyword-details hidden" data-parent="foretell">
+                <h3>Foretell</h3>
+                <p>While you have priority, you may pay {2} and exile a card from your hand face down. You may cast it later for its foretell cost.</p>
+                <ul>
+                    <li>When you foretell a card, you exile it face down as a separate game object—you retain knowledge of what it is.</li>
+                    <li>On a later turn, you can cast the foretold card from exile by paying its foretell cost instead of its normal mana cost.</li>
+                    <li>The foretell cost is typically lower than the card's normal mana cost, allowing you to play cards ahead of tempo.</li>
+                    <li>If a card has multiple foretell values or conditions, you follow whichever is printed on the card.</li>
+                    <li>You can foretell multiple cards during the same turn, but only one card may be foretold at a time by most cards.</li>
+                    <li>Forgetting about a foretold card (e.g., losing track of which turn it was foretold) doesn't prevent you from casting it later.</li>
+                </ul>
             </div>
         </main>
     </div>

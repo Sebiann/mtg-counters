@@ -74,3 +74,23 @@ body.dark-mode {
         filter: brightness(0) invert(100%);
     }
 }
+
+.keyword-details {
+    display: none;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.keyword-details.open {
+    display: block;
+}
+
+.keyword-row {
+    cursor: pointer;
+}
+
+.keyword-row:hover .expand-indicator {
+    opacity: 1;
+}
