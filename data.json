@@ -131,6 +131,18 @@
           ]
         },
         {
+          "key": "forestwalk",
+          "label": "Forestwalk",
+          "title": "Forestwalk",
+          "icon": "keyword.svg",
+          "description": "A creature with forestwalk can't be blocked as long as defending player controls a Forest.",
+          "bullets": [
+            "Forestwalk checks only whether the defending player controls at least one Forest.",
+            "If the condition is true, no creatures can block it, regardless of their abilities.",
+            "Landwalk is an evasion ability and does not affect attacking requirements."
+          ]
+        },
+        {
           "key": "goad",
           "label": "Goad",
           "title": "Goad",
@@ -205,6 +217,18 @@
           ]
         },
         {
+          "key": "planeswalk",
+          "label": "Planeswalk",
+          "title": "Planeswalk",
+          "icon": "keyword.svg",
+          "description": "A creature with planeswalk can't be blocked as long as defending player controls a Plane card.",
+          "bullets": [
+            "Planeswalk follows the same pattern as landwalk abilities, but checks for Plane cards.",
+            "If the defending player controls a Plane, the creature is unblockable for that combat.",
+            "This ability is uncommon and mostly appears in Planechase-related designs."
+          ]
+        },
+        {
           "key": "reach",
           "label": "Reach",
           "title": "Reach",
@@ -227,6 +251,18 @@
             "It only affects attacking and abilities with the tap symbol - untap abilities and non-tap activated abilities work fine.",
             "A creature that has been under your control since the beginning of your most recent turn is no longer sick.",
             "Gaining control of an opponent's creature gives it summoning sickness unless it has haste."
+          ]
+        },
+        {
+          "key": "swampwalk",
+          "label": "Swampwalk",
+          "title": "Swampwalk",
+          "icon": "keyword.svg",
+          "description": "A creature with swampwalk can't be blocked as long as defending player controls a Swamp.",
+          "bullets": [
+            "Swampwalk checks only whether the defending player controls at least one Swamp.",
+            "If the condition is true, no creatures can block it, regardless of their abilities.",
+            "Like other landwalk abilities, swampwalk only matters while attacking."
           ]
         },
         {
@@ -384,6 +420,18 @@
             "This is a replacement effect, not a trigger - it modifies where the permanent goes.",
             "Finality prevents reanimation strategies - the card can't be brought back from the graveyard because it never gets there.",
             "If the permanent is a token, it can be exiled, then it ceases to exist as a state-based action."
+          ]
+        },
+        {
+          "key": "phase_out",
+          "label": "Phase Out",
+          "title": "Phase Out",
+          "icon": "keyword.svg",
+          "description": "A phased-out permanent is treated as though it doesn't exist until it phases in.",
+          "bullets": [
+            "Phasing doesn't cause a permanent to leave or enter the battlefield.",
+            "Auras, Equipment, and counters attached to that permanent phase out with it and return with it.",
+            "Triggers for leaving or entering the battlefield do not happen from phasing."
           ]
         },
         {
