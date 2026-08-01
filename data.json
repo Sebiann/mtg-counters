@@ -518,6 +518,64 @@
           ]
         }
       ]
+    },
+    {
+      "type": "keywords",
+      "title": "Bending Mechanics",
+      "items": [
+        {
+          "key": "airbend",
+          "label": "Airbend",
+          "title": "Airbend",
+          "icon": "keyword.svg",
+          "description": "Exile target permanent or spell. While it's exiled this way, its owner may cast it for {2} rather than its mana cost.",
+          "bullets": [
+            "Only the {2} alternative cost applies — other alternate costs don't work and X is always 0.",
+            "Lands exiled this way can't be played from exile since lands may only be played from hand.",
+            "Tokens cease to exist when exiled and can't be returned.",
+            "The timing of casting from exile follows the card's normal restrictions unless otherwise stated."
+          ]
+        },
+        {
+          "key": "earthbend",
+          "label": "Earthbend",
+          "title": "Earthbend",
+          "icon": "keyword.svg",
+          "description": "Target land you control becomes a 0/0 creature with haste that's still a land. Put X +1/+1 counters on it. When it dies or is exiled as a creature, return it to the battlefield tapped.",
+          "bullets": [
+            "The animated land is still a land — it still produces mana and counts toward your land total.",
+            "The +1/+1 counters remain on the land even after it stops being a creature.",
+            "Multiple earthbend effects can stack additional counters onto the same land.",
+            "If the land dies or is exiled while animated, it returns to the battlefield tapped, triggering any relevant enters-the-battlefield effects."
+          ]
+        },
+        {
+          "key": "firebend",
+          "label": "Firebend",
+          "title": "Firebend",
+          "icon": "keyword.svg",
+          "description": "When a creature with firebend N attacks, add N red mana. That mana can only be used during the combat phase and is lost at the end of combat.",
+          "bullets": [
+            "The red mana is available from when the attack trigger resolves through the end of combat.",
+            "Unused mana from firebend is lost when the combat phase ends — it doesn't carry over to later phases.",
+            "Best used with instants or activated abilities that can be triggered during combat.",
+            "Multiple creatures with firebend attacking simultaneously each add their mana separately."
+          ]
+        },
+        {
+          "key": "waterbend",
+          "label": "Waterbend",
+          "title": "Waterbend",
+          "icon": "keyword.svg",
+          "description": "When paying a waterbend cost, you may tap untapped artifacts or creatures you control to pay for each generic mana in that cost rather than paying mana.",
+          "bullets": [
+            "Only generic mana in the cost can be paid this way — colored mana requirements must still be paid normally.",
+            "Tapping a permanent for waterbend doesn't require that permanent to produce mana on its own.",
+            "Similar to convoke and improvise, but applies to abilities and additional costs, not just spell casting.",
+            "Creatures with vigilance are especially effective since they can attack and still be tapped for waterbend costs."
+          ]
+        }
+      ]
     }
   ]
 }
