@@ -58,6 +58,19 @@
       "title": "Core Creature Abilities",
       "items": [
         {
+          "key": "changeling",
+          "label": "Changeling",
+          "title": "Changeling",
+          "icon": "keyword.svg",
+          "description": "This card is every creature type at all times.",
+          "bullets": [
+            "Changeling applies in all zones — in hand, library, graveyard, and exile, not just on the battlefield.",
+            "A changeling creature benefits from all tribal effects, such as lord bonuses, regardless of the specific creature type mentioned.",
+            "If an effect counts creature types, changeling creatures count as one creature of every type simultaneously.",
+            "Changeling overrides any 'this creature is only [type]' restrictions — it is always all types."
+          ]
+        },
+        {
           "key": "copy",
           "label": "Copy",
           "title": "Copy",
