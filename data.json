@@ -35,21 +35,24 @@
           "label": "Explore",
           "title": "Explore",
           "icon": "explore.png",
-          "description": "Reveal the top card of your library. If it's a land card, put it into your hand. Otherwise put a +1/+1 counter on this creature, then you may put the revealed card into your graveyard."
+          "description": "Reveal the top card of your library. If it's a land card, put it into your hand. Otherwise put a +1/+1 counter on this creature, then you may put the revealed card into your graveyard.",
+          "type": "Keyword action"
         },
         {
           "key": "scry",
           "label": "Scry",
           "title": "Scry",
           "icon": "keyword.svg",
-          "description": "Look at the top x cards of your library, then put any number of them on the bottom and the rest back on top in any order."
+          "description": "Look at the top x cards of your library, then put any number of them on the bottom and the rest back on top in any order.",
+          "type": "Keyword action"
         },
         {
           "key": "surveil",
           "label": "Surveil",
           "title": "Surveil",
           "icon": "surveil.png",
-          "description": "Look at the top x cards of your library, then put any number of them into your graveyard and the rest back on top in any order."
+          "description": "Look at the top x cards of your library, then put any number of them into your graveyard and the rest back on top in any order.",
+          "type": "Keyword action"
         }
       ]
     },
@@ -61,27 +64,29 @@
           "key": "annihilator",
           "label": "Annihilator",
           "title": "Annihilator",
-          "icon": "keyword.svg",
+          "icon": "annihilator.png",
           "description": "Whenever a creature with annihilator N attacks, the defending player sacrifices N permanents.",
           "bullets": [
             "Annihilator triggers when the attack is declared, before blockers are chosen, so the defending player sacrifices before they can block.",
             "The defending player chooses which permanents to sacrifice — they can choose lands, creatures, or anything else.",
             "Multiple instances of annihilator add up — a creature with annihilator 2 attacking alongside another with annihilator 1 forces three sacrifices.",
             "Even if the creature is removed from combat after the trigger is placed on the stack, the trigger still resolves."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "changeling",
           "label": "Changeling",
           "title": "Changeling",
-          "icon": "keyword.svg",
+          "icon": "changeling.png",
           "description": "This card is every creature type at all times.",
           "bullets": [
             "Changeling applies in all zones — in hand, library, graveyard, and exile, not just on the battlefield.",
             "A changeling creature benefits from all tribal effects, such as lord bonuses, regardless of the specific creature type mentioned.",
             "If an effect counts creature types, changeling creatures count as one creature of every type simultaneously.",
             "Changeling overrides any 'this creature is only [type]' restrictions — it is always all types."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "copy",
@@ -94,7 +99,8 @@
             "Some copy effects create tokens, while others do not; follow the exact card text.",
             "If copying a creature, the copy uses the copiable values of the chosen object.",
             "If you copy a permanent that's a copy of something else, you copy the current state of the first copy."
-          ]
+          ],
+          "type": "Rules concept"
         },
         {
           "key": "deathtouch",
@@ -106,7 +112,8 @@
             "Any nonzero amount of damage from a source with deathtouch is considered lethal, whether it's combat damage or noncombat damage.",
             "Deathtouch interacts powerfully with trample — because any 1 damage is lethal, all remaining damage tramples over.",
             "Multiple instances of deathtouch are redundant."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "defender",
@@ -118,7 +125,8 @@
             "Defender doesn't prevent the creature from blocking - it's purely an attack restriction.",
             "Creatures with defender can still use abilities that cost tapping.",
             "If a creature loses defender via an effect, it can attack normally."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "dethrone",
@@ -131,7 +139,8 @@
             "In a tie for the most life, attacking any of the tied players triggers dethrone.",
             "Dethrone was introduced in Commander 2014 and is designed for multiplayer games.",
             "The +1/+1 counter is placed regardless of whether the attack connects or deals damage."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "double_strike",
@@ -143,20 +152,22 @@
             "The creature effectively hits twice - once during first strike damage and once during regular damage.",
             "Double strike includes first strike; the creature does not get a third hit.",
             "If blocked by a creature that dies in the first strike step, the double striker still deals its second instance of damage to the player if it has trample."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "exalted",
           "label": "Exalted",
           "title": "Exalted",
-          "icon": "keyword.svg",
+          "icon": "exalted.png",
           "description": "Whenever a creature attacks alone, each creature you control with exalted gives the attacker +1/+1 until end of turn.",
           "bullets": [
             "All exalted triggers stack — if you control three creatures with exalted and one attacks alone, it gets +3/+3 until end of turn.",
             "'Attacks alone' means it is the only creature declared as an attacker during that combat.",
             "The bonus applies even if the exalted creature itself is not the attacker.",
             "Exalted triggers before blockers are declared, so the bonus is already applied when damage is calculated."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "first_strike",
@@ -168,7 +179,8 @@
             "Combat damage is dealt in two steps: first strikers deal damage, then everyone else does.",
             "If a first striker kills its blocker, the blocker deals no combat damage back.",
             "Granting first strike after the first strike damage step doesn't retroactively deal damage."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "flying",
@@ -180,19 +192,21 @@
             "Flying is an evasion ability that restricts blocking.",
             "Creatures without flying or reach cannot block a creature with flying.",
             "Multiple instances of flying are redundant."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "forestwalk",
           "label": "Forestwalk",
           "title": "Forestwalk",
-          "icon": "keyword.svg",
+          "icon": "landwalk.png",
           "description": "A creature with forestwalk can't be blocked as long as defending player controls a Forest.",
           "bullets": [
             "Forestwalk checks only whether the defending player controls at least one Forest.",
             "If the condition is true, no creatures can block it, regardless of their abilities.",
             "Landwalk is an evasion ability and does not affect attacking requirements."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "goad",
@@ -205,7 +219,8 @@
             "If the goaded creature can't attack the goading player due to a restriction, it attacks another player or a planeswalker.",
             "If goaded by multiple players, the creature avoids all of them if able.",
             "Goad lasts until your next turn."
-          ]
+          ],
+          "type": "Keyword action"
         },
         {
           "key": "haste",
@@ -217,7 +232,8 @@
             "Normally, creatures can't attack or use tap abilities the turn they come under your control, also known as summoning sickness.",
             "Haste only affects the can't attack/tap restriction - it doesn't prevent other restrictions.",
             "Losing haste after attacking doesn't remove the creature from combat."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "indestructible",
@@ -229,7 +245,8 @@
             "Effects that say destroy don't affect indestructible permanents.",
             "Lethal damage and damage from a source with deathtouch don't destroy indestructible creatures, but the damage stays marked on them.",
             "Sacrificing or exiling an indestructible permanent still works - those aren't destruction."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "infect",
@@ -243,7 +260,8 @@
             "Damage from infect sources to creatures adds -1/-1 counters rather than marking damage, so toughness reductions are permanent until the creature leaves the battlefield.",
             "Combining infect with effects that pump power quickly closes out games through the poison win condition.",
             "Wither is a similar ability that also deals damage as -1/-1 counters to creatures, but does not give poison counters to players."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "lifelink",
@@ -256,7 +274,8 @@
             "The life gain happens when the damage is dealt, not when the creature is later removed from battle.",
             "Multiple instances of lifelink are redundant and do not increase the amount of life gained.",
             "If a 5/5 creature with lifelink deals damage, its controller gains 5 life no matter the amount of defense the blocker has."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "lore",
@@ -268,20 +287,22 @@
             "Chapter abilities trigger based on the number of lore counters - Chapter I triggers on the first, Chapter II on the second, and so on.",
             "Once the final chapter resolves, the Saga is sacrificed as a state-based action.",
             "Lore counters can be added or removed by other card effects to speed up or reset Sagas."
-          ]
+          ],
+          "type": "Counter type"
         },
         {
           "key": "magecraft",
           "label": "Magecraft",
           "title": "Magecraft",
-          "icon": "keyword.svg",
+          "icon": "magecraft.png",
           "description": "Whenever you cast or copy an instant or sorcery spell, each ability with magecraft triggers.",
           "bullets": [
             "Magecraft triggers on both casting and copying — copying a spell without casting it still counts.",
             "Multiple magecraft abilities on different permanents all trigger from the same spell cast.",
             "Cheap cantrips and rituals are especially effective for triggering magecraft repeatedly in one turn.",
             "Magecraft was introduced in Strixhaven and is the signature mechanic of its spellcasting-themed sets."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "menace",
@@ -293,7 +314,8 @@
             "One blocker is not enough - at least two creatures must block it.",
             "If one of the two blockers is removed before damage, the block is still legal and the creature remains blocked.",
             "Multiple instances of menace are redundant - it still only needs two blockers."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "myriad",
@@ -306,19 +328,21 @@
             "Myriad is designed for Commander — it lets one creature effectively attack all opponents simultaneously.",
             "Triggers and abilities on the tokens (including on-attack triggers) still resolve even though the tokens are later exiled.",
             "The original creature attacks one player or planeswalker; the tokens each attack a different opponent."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "planeswalk",
           "label": "Planeswalk",
           "title": "Planeswalk",
-          "icon": "keyword.svg",
+          "icon": "landwalk.png",
           "description": "A creature with planeswalk can't be blocked as long as defending player controls a Plane card.",
           "bullets": [
             "Planeswalk follows the same pattern as landwalk abilities, but checks for Plane cards.",
             "If the defending player controls a Plane, the creature is unblockable for that combat.",
             "This ability is uncommon and mostly appears in Planechase-related designs."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "prowess",
@@ -331,7 +355,8 @@
             "Artifacts, enchantments, planeswalkers, and instants or sorceries all trigger prowess.",
             "Multiple instances of prowess each trigger separately, giving +1/+1 per instance per spell cast.",
             "The bonus lasts only until end of turn and doesn't carry over to subsequent turns."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "reach",
@@ -343,7 +368,8 @@
             "Reach allows a creature to block attackers with flying that it otherwise couldn't.",
             "Reach does not grant flying - the creature still can't be used to satisfy flying requirements.",
             "Multiple instances of reach are redundant."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "summoning_sickness",
@@ -356,32 +382,35 @@
             "It only affects attacking and abilities with the tap symbol - untap abilities and non-tap activated abilities work fine.",
             "A creature that has been under your control since the beginning of your most recent turn is no longer sick.",
             "Gaining control of an opponent's creature gives it summoning sickness unless it has haste."
-          ]
+          ],
+          "type": "Game rule"
         },
         {
           "key": "swampwalk",
           "label": "Swampwalk",
           "title": "Swampwalk",
-          "icon": "keyword.svg",
+          "icon": "landwalk.png",
           "description": "A creature with swampwalk can't be blocked as long as defending player controls a Swamp.",
           "bullets": [
             "Swampwalk checks only whether the defending player controls at least one Swamp.",
             "If the condition is true, no creatures can block it, regardless of their abilities.",
             "Like other landwalk abilities, swampwalk only matters while attacking."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "toxic",
           "label": "Toxic",
           "title": "Toxic",
-          "icon": "keyword.svg",
+          "icon": "toxic.png",
           "description": "Whenever a creature with toxic N deals combat damage to a player, that player gets N poison counters in addition to the normal damage.",
           "bullets": [
             "Unlike infect, toxic damage still reduces the player's life total — the poison counters are additional.",
             "Multiple instances of toxic stack — a creature with toxic 1 and a separate toxic 2 ability gives 3 poison counters per combat hit.",
             "A player with ten or more poison counters loses the game, regardless of their life total.",
             "Toxic only applies to combat damage, not noncombat damage from that creature."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "trample",
@@ -393,7 +422,8 @@
             "You must assign at least lethal damage to all blockers before assigning leftover damage to the player or planeswalker.",
             "If no creatures block, all damage goes to the player or planeswalker.",
             "Trample works with deathtouch - any nonzero damage is considered lethal, so the rest tramples over."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "vigilance",
@@ -405,7 +435,8 @@
             "The creature still declares an attack as normal - it just doesn't tap when doing so.",
             "This means it can both attack and block on subsequent turns without needing to untap.",
             "Vigilance only applies to attacking, not to other tap-based abilities."
-          ]
+          ],
+          "type": "Static ability"
         }
       ]
     },
@@ -423,7 +454,8 @@
             "Only opponent spells and abilities are affected — you can still target your own hexproof permanents.",
             "Non-targeting effects like board wipes still affect hexproof creatures.",
             "You can't cast an Aura spell targeting a hexproof creature. However, effects that put an Aura onto the battlefield without casting it (such as 'search your library for an Aura and attach it') bypass hexproof since no targeting occurs."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "hexproof_black",
@@ -436,7 +468,8 @@
             "You can still target your own permanent with black spells or abilities.",
             "It does not prevent black creatures from blocking, or black Auras from attaching through non-casting effects.",
             "Multiple hexproof-from-[color] abilities are redundant — one instance is sufficient."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "hexproof_blue",
@@ -449,7 +482,8 @@
             "You can still target your own permanent with blue spells or abilities.",
             "It does not prevent blue creatures from blocking, or blue Auras from attaching through non-casting effects.",
             "Multiple hexproof-from-[color] abilities are redundant — one instance is sufficient."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "hexproof_green",
@@ -462,7 +496,8 @@
             "You can still target your own permanent with green spells or abilities.",
             "It does not prevent green creatures from blocking, or green Auras from attaching through non-casting effects.",
             "Multiple hexproof-from-[color] abilities are redundant — one instance is sufficient."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "hexproof_red",
@@ -475,7 +510,8 @@
             "You can still target your own permanent with red spells or abilities.",
             "It does not prevent red creatures from blocking, or red Auras from attaching through non-casting effects.",
             "Multiple hexproof-from-[color] abilities are redundant — one instance is sufficient."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "hexproof_white",
@@ -488,7 +524,8 @@
             "You can still target your own permanent with white spells or abilities.",
             "It does not prevent white creatures from blocking, or white Auras from attaching through non-casting effects.",
             "Multiple hexproof-from-[color] abilities are redundant — one instance is sufficient."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "poison",
@@ -501,13 +538,14 @@
             "Creatures with toxic or toxic X deal X poison counters in addition to normal combat damage.",
             "Poison counters persist - there's no natural way to remove them outside of specific card effects.",
             "Infect damage gives poison counters equal to the damage dealt instead of regular damage."
-          ]
+          ],
+          "type": "Counter type"
         },
         {
           "key": "ward",
           "label": "Ward",
           "title": "Ward",
-          "icon": "keyword.svg",
+          "icon": "ward.png",
           "description": "Whenever this permanent becomes the target of a spell or ability an opponent controls, counter it unless that player pays the ward cost.",
           "bullets": [
             "Ward triggers when any opponent's spell or ability targets the permanent — not just removal spells.",
@@ -515,7 +553,8 @@
             "Ward only protects from opponents' effects — you can freely target your own permanents with ward.",
             "Multiple ward triggers on the same permanent must each be paid separately if triggered at the same time.",
             "Ward doesn't prevent non-targeting effects such as board wipes that say 'destroy all creatures.'"
-          ]
+          ],
+          "type": "Triggered ability"
         }
       ]
     },
@@ -533,7 +572,8 @@
             "This can be caused by abilities like defender, or by external effects that prohibit attacking.",
             "If the restriction is removed, for example if defender is stripped, the creature can attack normally.",
             "Effects that force a creature to attack won't override a can't attack restriction - restrictions win over requirements."
-          ]
+          ],
+          "type": "Rules effect"
         },
         {
           "key": "cant_block",
@@ -545,7 +585,8 @@
             "This is typically imposed by another creature's ability, for example creatures your opponents control can't block.",
             "If the effect ends before the declare blockers step, the creature can block normally.",
             "Like with attacking, can't block restrictions override effects that would force a creature to block."
-          ]
+          ],
+          "type": "Rules effect"
         },
         {
           "key": "finality",
@@ -557,7 +598,8 @@
             "This is a replacement effect, not a trigger - it modifies where the permanent goes.",
             "Finality prevents reanimation strategies - the card can't be brought back from the graveyard because it never gets there.",
             "If the permanent is a token, it can be exiled, then it ceases to exist as a state-based action."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "phase_out",
@@ -569,7 +611,8 @@
             "Phasing doesn't cause a permanent to leave or enter the battlefield.",
             "Auras, Equipment, and counters attached to that permanent phase out with it and return with it.",
             "Triggers for leaving or entering the battlefield do not happen from phasing."
-          ]
+          ],
+          "type": "Game action"
         },
         {
           "key": "shield",
@@ -583,7 +626,8 @@
             "Multiple shield counters protect the permanent multiple times.",
             "Shield counters are physical counters placed on the permanent; they can be added or removed by various card effects.",
             "This differs from ward - ward counters an opponent's spell or ability targeting the permanent, while shield protects from damage and destruction effects."
-          ]
+          ],
+          "type": "Counter type"
         }
       ]
     },
@@ -601,20 +645,22 @@
             "You may cast the exiled card without paying its mana cost.",
             "Any cards exiled this way (that weren't cast) are put under your library in a random order after the spell resolves, unless an effect changes that.",
             "Cascade only applies when the spell is cast, not when it is later copied or replayed."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "convoke",
           "label": "Convoke",
           "title": "Convoke",
-          "icon": "keyword.svg",
+          "icon": "convoke.png",
           "description": "Your creatures can help cast this spell. Each creature you tap as you cast this spell pays for {1} or one mana of that creature's color.",
           "bullets": [
             "Tapping a creature for convoke is part of paying the spell's cost — it happens during casting, not as a separate action.",
             "Creatures affected by summoning sickness can still be tapped for convoke, since it's a cost payment rather than an activated ability.",
             "You can tap as many untapped creatures as you have, but only up to what the spell actually costs.",
             "Convoke reduces the mana you need to pay but cannot reduce the cost below zero."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "crew",
@@ -626,7 +672,8 @@
             "You must pay the crew cost with untapped creatures you control.",
             "Only creatures that are untapped and controlled by you can be used to pay the cost.",
             "Once a vehicle is crewed, it can attack and block as a creature for the turn's duration."
-          ]
+          ],
+          "type": "Activated ability"
         },
         {
           "key": "echo",
@@ -638,7 +685,8 @@
             "Echo checks at your upkeep, not while casting the spell.",
             "If you don't pay, you sacrifice that permanent.",
             "Echo applies once per permanent entering under your control in that window."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "emerge",
@@ -651,7 +699,8 @@
             "The sacrifice is part of paying the cost and happens as you cast the spell, not after it resolves.",
             "Death triggers and sacrifice synergies from the sacrificed creature still resolve after the emerge spell resolves.",
             "You may still pay the full mana cost of the emerge card rather than using emerge."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "encore",
@@ -665,20 +714,22 @@
             "Tokens are sacrificed at the beginning of the next end step, even if they didn't attack.",
             "Since the original card is exiled to activate encore, it can't be reanimated from the graveyard afterward.",
             "Encore can only be activated as a sorcery — at the start of your main phase with an empty stack."
-          ]
+          ],
+          "type": "Activated ability"
         },
         {
           "key": "fabricate",
           "label": "Fabricate",
           "title": "Fabricate",
-          "icon": "keyword.svg",
+          "icon": "fabricate.png",
           "description": "When a permanent with fabricate N enters the battlefield, put N +1/+1 counters on it or create N 1/1 colorless Servo artifact creature tokens.",
           "bullets": [
             "You choose one option — counters or Servo tokens — you can't split between the two.",
             "The choice is made when the ability resolves, after the permanent has already entered the battlefield.",
             "Servo tokens are 1/1 colorless artifact creatures with no abilities.",
             "Fabricate 2 gives either two +1/+1 counters on the permanent or two Servo tokens."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "flash",
@@ -689,7 +740,8 @@
           "bullets": [
             "Flash lets you play cards during your opponent's turn.",
             "This is commonly used to surprise opponents with instant-speed interaction or threats."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "flashback",
@@ -701,7 +753,8 @@
             "The card must be in your graveyard to use flashback.",
             "You still pay the listed flashback cost when casting it this way.",
             "If a spell cast with flashback would leave the stack, exile it instead of putting it anywhere else."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "foretell",
@@ -715,7 +768,8 @@
             "The foretell cost is typically lower than the card's normal mana cost, allowing you to play cards ahead of tempo.",
             "You can take the foretell special action only once each turn.",
             "Forgetting about a foretold card, for example losing track of which turn it was foretold, doesn't prevent you from casting it later."
-          ]
+          ],
+          "type": "Keyword action"
         },
         {
           "key": "kicker",
@@ -727,7 +781,8 @@
             "The kicker cost is chosen by the card and is paid when the spell is cast.",
             "If you pay it, the spell gains an extra effect printed on the card.",
             "Different cards use kicker for different bonuses, so the exact effect depends on the card."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "mutate",
@@ -739,26 +794,28 @@
             "You choose whether the new card goes on top or underneath.",
             "The merged creature has the characteristics of the top card and abilities from all cards in the pile.",
             "If the merged creature leaves the battlefield, each card goes to the appropriate zone individually."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "ninjutsu",
           "label": "Ninjutsu",
           "title": "Ninjutsu",
-          "icon": "keyword.svg",
+          "icon": "ninjutsu.png",
           "description": "Pay the ninjutsu cost and return an unblocked attacker you control to your hand: Put this card onto the battlefield from your hand tapped and attacking.",
           "bullets": [
             "Ninjutsu can only be activated after blockers are declared and the target creature is confirmed to be unblocked.",
             "The deployed ninja is already attacking and deals combat damage normally, including triggering any on-attack or on-damage abilities.",
             "Summoning sickness doesn't apply to the ninja since it entered already attacking — not via a normal declare attackers step.",
             "The swapped-out creature returns to your hand and can be recast on a later turn."
-          ]
+          ],
+          "type": "Activated ability"
         },
         {
           "key": "partner",
           "label": "Partner",
           "title": "Partner",
-          "icon": "keyword.svg",
+          "icon": "partner.png",
           "description": "Two legendary creatures with partner can both be your commanders at the same time.",
           "bullets": [
             "Each partner starts in the command zone and can be cast independently at any time you could normally cast your commander.",
@@ -766,7 +823,8 @@
             "'Partner with [name]' is a variant that only pairs with one specific named card, not any other partner creature.",
             "Having two commanders expands the color identity available for deckbuilding.",
             "If one partner is moved to the command zone, the other can remain on the battlefield as normal."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "persist",
@@ -779,7 +837,8 @@
             "If a creature has both persist and undying, dying with no counters triggers both; the first to resolve adds a counter, preventing the second from returning it.",
             "Removing the -1/-1 counter (for example with a proliferate reversal or counter removal) resets persist, allowing it to trigger again.",
             "Persist is popular in Commander with sacrifice synergies since it repeatedly returns the creature to generate death triggers."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "protection",
@@ -793,7 +852,8 @@
             "Creatures with that quality can't block the protected creature.",
             "The protected permanent can't be the target of spells or abilities from sources with that quality.",
             "Protection doesn't prevent non-targeting effects — board wipes that say 'destroy all creatures' still destroy it unless they specifically target."
-          ]
+          ],
+          "type": "Static ability"
         },
         {
           "key": "storm",
@@ -806,33 +866,36 @@
             "The copies are placed on the stack but are not cast, so they can't trigger storm again or be countered by spells that target spells on the stack.",
             "Storm counts all spells cast this turn by any player, not just you.",
             "In Commander, storm can be a game-ending combo when many spells have already been cast in one turn."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "undying",
           "label": "Undying",
           "title": "Undying",
-          "icon": "keyword.svg",
+          "icon": "undying.png",
           "description": "When a creature with undying dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.",
           "bullets": [
             "Undying only triggers if the creature had no +1/+1 counters at the time it died.",
             "If a creature has both undying and persist, dying with no counters triggers both; the first to resolve adds a counter, preventing the second from returning it.",
             "Removing the +1/+1 counter resets undying, allowing it to trigger again if the creature dies.",
             "Undying pairs well with sacrifice outlets in Commander for repeated death triggers and enters-the-battlefield effects."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "unearth",
           "label": "Unearth",
           "title": "Unearth",
-          "icon": "keyword.svg",
+          "icon": "unearth.png",
           "description": "Pay the unearth cost: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Activate only as a sorcery.",
           "bullets": [
             "Unearth returns the creature temporarily — it has haste and is useful for one-turn burst of value or damage.",
             "If the creature would leave the battlefield for any reason before the end step (bounced, destroyed, exiled), it's exiled instead of going to any other zone.",
             "Since the card is exiled after unearth, it cannot be reanimated again from the graveyard.",
             "Unearth can only be activated as a sorcery — during your main phase with an empty stack."
-          ]
+          ],
+          "type": "Activated ability"
         }
       ]
     },
@@ -844,53 +907,57 @@
           "key": "airbend",
           "label": "Airbend",
           "title": "Airbend",
-          "icon": "keyword.svg",
+          "icon": "airbend.png",
           "description": "Exile target permanent or spell. While it's exiled this way, its owner may cast it for {2} rather than its mana cost.",
           "bullets": [
             "Only the {2} alternative cost applies — other alternate costs don't work and X is always 0.",
             "Lands exiled this way can't be played from exile since lands may only be played from hand.",
             "Tokens cease to exist when exiled and can't be returned.",
             "The timing of casting from exile follows the card's normal restrictions unless otherwise stated."
-          ]
+          ],
+          "type": "Keyword action"
         },
         {
           "key": "earthbend",
           "label": "Earthbend",
           "title": "Earthbend",
-          "icon": "keyword.svg",
+          "icon": "earthbend.png",
           "description": "Target land you control becomes a 0/0 creature with haste that's still a land. Put X +1/+1 counters on it. When it dies or is exiled as a creature, return it to the battlefield tapped.",
           "bullets": [
             "The animated land is still a land — it still produces mana and counts toward your land total.",
             "The +1/+1 counters remain on the land even after it stops being a creature.",
             "Multiple earthbend effects can stack additional counters onto the same land.",
             "If the land dies or is exiled while animated, it returns to the battlefield tapped, triggering any relevant enters-the-battlefield effects."
-          ]
+          ],
+          "type": "Keyword action"
         },
         {
           "key": "firebend",
           "label": "Firebend",
           "title": "Firebend",
-          "icon": "keyword.svg",
+          "icon": "firebending.png",
           "description": "When a creature with firebend N attacks, add N red mana. That mana can only be used during the combat phase and is lost at the end of combat.",
           "bullets": [
             "The red mana is available from when the attack trigger resolves through the end of combat.",
             "Unused mana from firebend is lost when the combat phase ends — it doesn't carry over to later phases.",
             "Best used with instants or activated abilities that can be triggered during combat.",
             "Multiple creatures with firebend attacking simultaneously each add their mana separately."
-          ]
+          ],
+          "type": "Triggered ability"
         },
         {
           "key": "waterbend",
           "label": "Waterbend",
           "title": "Waterbend",
-          "icon": "keyword.svg",
+          "icon": "waterbend.png",
           "description": "When paying a waterbend cost, you may tap untapped artifacts or creatures you control to pay for each generic mana in that cost rather than paying mana.",
           "bullets": [
             "Only generic mana in the cost can be paid this way — colored mana requirements must still be paid normally.",
             "Tapping a permanent for waterbend doesn't require that permanent to produce mana on its own.",
             "Similar to convoke and improvise, but applies to abilities and additional costs, not just spell casting.",
             "Creatures with vigilance are especially effective since they can attack and still be tapped for waterbend costs."
-          ]
+          ],
+          "type": "Static ability"
         }
       ]
     }
