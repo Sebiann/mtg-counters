@@ -58,6 +58,19 @@
       "title": "Core Creature Abilities",
       "items": [
         {
+          "key": "annihilator",
+          "label": "Annihilator",
+          "title": "Annihilator",
+          "icon": "keyword.svg",
+          "description": "Whenever a creature with annihilator N attacks, the defending player sacrifices N permanents.",
+          "bullets": [
+            "Annihilator triggers when the attack is declared, before blockers are chosen, so the defending player sacrifices before they can block.",
+            "The defending player chooses which permanents to sacrifice — they can choose lands, creatures, or anything else.",
+            "Multiple instances of annihilator add up — a creature with annihilator 2 attacking alongside another with annihilator 1 forces three sacrifices.",
+            "Even if the creature is removed from combat after the trigger is placed on the stack, the trigger still resolves."
+          ]
+        },
+        {
           "key": "changeling",
           "label": "Changeling",
           "title": "Changeling",
@@ -88,10 +101,10 @@
           "label": "Deathtouch",
           "title": "Deathtouch",
           "icon": "deathtouch.png",
-          "description": "A creature with deathtouch deals lethal damage with any amount of damage, even 1.",
+          "description": "A creature with deathtouch destroys any creature it deals any amount of damage to.",
           "bullets": [
-            "Any nonzero amount of combat damage assigned to a creature by a source with deathtouch is considered lethal damage.",
-            "Deathtouch does not trigger on non-combat damage unless the source explicitly says so, but the rules actually apply to any damage from a source with deathtouch.",
+            "Any nonzero amount of damage from a source with deathtouch is considered lethal, whether it's combat damage or noncombat damage.",
+            "Deathtouch interacts powerfully with trample — because any 1 damage is lethal, all remaining damage tramples over.",
             "Multiple instances of deathtouch are redundant."
           ]
         },
@@ -108,6 +121,19 @@
           ]
         },
         {
+          "key": "dethrone",
+          "label": "Dethrone",
+          "title": "Dethrone",
+          "icon": "keyword.svg",
+          "description": "Whenever a creature with dethrone attacks the player with the most life (or tied for the most), put a +1/+1 counter on it.",
+          "bullets": [
+            "Dethrone checks life totals at the time the creature attacks, not when damage is dealt.",
+            "In a tie for the most life, attacking any of the tied players triggers dethrone.",
+            "Dethrone was introduced in Commander 2014 and is designed for multiplayer games.",
+            "The +1/+1 counter is placed regardless of whether the attack connects or deals damage."
+          ]
+        },
+        {
           "key": "double_strike",
           "label": "Double Strike",
           "title": "Double Strike",
@@ -117,6 +143,19 @@
             "The creature effectively hits twice - once during first strike damage and once during regular damage.",
             "Double strike includes first strike; the creature does not get a third hit.",
             "If blocked by a creature that dies in the first strike step, the double striker still deals its second instance of damage to the player if it has trample."
+          ]
+        },
+        {
+          "key": "exalted",
+          "label": "Exalted",
+          "title": "Exalted",
+          "icon": "keyword.svg",
+          "description": "Whenever a creature attacks alone, each creature you control with exalted gives the attacker +1/+1 until end of turn.",
+          "bullets": [
+            "All exalted triggers stack — if you control three creatures with exalted and one attacks alone, it gets +3/+3 until end of turn.",
+            "'Attacks alone' means it is the only creature declared as an attacker during that combat.",
+            "The bonus applies even if the exalted creature itself is not the attacker.",
+            "Exalted triggers before blockers are declared, so the bonus is already applied when damage is calculated."
           ]
         },
         {
@@ -193,6 +232,20 @@
           ]
         },
         {
+          "key": "infect",
+          "label": "Infect",
+          "title": "Infect",
+          "icon": "keyword.svg",
+          "description": "A creature with infect deals damage to players as poison counters and to creatures as -1/-1 counters instead of regular damage.",
+          "bullets": [
+            "A player who accumulates ten or more poison counters loses the game, regardless of life total.",
+            "Infect damage does not reduce a player's life total — it only gives poison counters.",
+            "Damage from infect sources to creatures adds -1/-1 counters rather than marking damage, so toughness reductions are permanent until the creature leaves the battlefield.",
+            "Combining infect with effects that pump power quickly closes out games through the poison win condition.",
+            "Wither is a similar ability that also deals damage as -1/-1 counters to creatures, but does not give poison counters to players."
+          ]
+        },
+        {
           "key": "lifelink",
           "label": "Lifelink",
           "title": "Lifelink",
@@ -218,6 +271,19 @@
           ]
         },
         {
+          "key": "magecraft",
+          "label": "Magecraft",
+          "title": "Magecraft",
+          "icon": "keyword.svg",
+          "description": "Whenever you cast or copy an instant or sorcery spell, each ability with magecraft triggers.",
+          "bullets": [
+            "Magecraft triggers on both casting and copying — copying a spell without casting it still counts.",
+            "Multiple magecraft abilities on different permanents all trigger from the same spell cast.",
+            "Cheap cantrips and rituals are especially effective for triggering magecraft repeatedly in one turn.",
+            "Magecraft was introduced in Strixhaven and is the signature mechanic of its spellcasting-themed sets."
+          ]
+        },
+        {
           "key": "menace",
           "label": "Menace",
           "title": "Menace",
@@ -230,6 +296,19 @@
           ]
         },
         {
+          "key": "myriad",
+          "label": "Myriad",
+          "title": "Myriad",
+          "icon": "keyword.svg",
+          "description": "Whenever a creature with myriad attacks, for each other opponent, create a token copy of it tapped and attacking that opponent or a planeswalker they control.",
+          "bullets": [
+            "Tokens created by myriad are exiled at the end of combat, regardless of what happened to them.",
+            "Myriad is designed for Commander — it lets one creature effectively attack all opponents simultaneously.",
+            "Triggers and abilities on the tokens (including on-attack triggers) still resolve even though the tokens are later exiled.",
+            "The original creature attacks one player or planeswalker; the tokens each attack a different opponent."
+          ]
+        },
+        {
           "key": "planeswalk",
           "label": "Planeswalk",
           "title": "Planeswalk",
@@ -239,6 +318,19 @@
             "Planeswalk follows the same pattern as landwalk abilities, but checks for Plane cards.",
             "If the defending player controls a Plane, the creature is unblockable for that combat.",
             "This ability is uncommon and mostly appears in Planechase-related designs."
+          ]
+        },
+        {
+          "key": "prowess",
+          "label": "Prowess",
+          "title": "Prowess",
+          "icon": "keyword.svg",
+          "description": "Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.",
+          "bullets": [
+            "Prowess triggers each time a noncreature spell is cast, so casting multiple spells in one turn gives multiple bonuses.",
+            "Artifacts, enchantments, planeswalkers, and instants or sorceries all trigger prowess.",
+            "Multiple instances of prowess each trigger separately, giving +1/+1 per instance per spell cast.",
+            "The bonus lasts only until end of turn and doesn't carry over to subsequent turns."
           ]
         },
         {
@@ -279,6 +371,19 @@
           ]
         },
         {
+          "key": "toxic",
+          "label": "Toxic",
+          "title": "Toxic",
+          "icon": "keyword.svg",
+          "description": "Whenever a creature with toxic N deals combat damage to a player, that player gets N poison counters in addition to the normal damage.",
+          "bullets": [
+            "Unlike infect, toxic damage still reduces the player's life total — the poison counters are additional.",
+            "Multiple instances of toxic stack — a creature with toxic 1 and a separate toxic 2 ability gives 3 poison counters per combat hit.",
+            "A player with ten or more poison counters loses the game, regardless of their life total.",
+            "Toxic only applies to combat damage, not noncombat damage from that creature."
+          ]
+        },
+        {
           "key": "trample",
           "label": "Trample",
           "title": "Trample",
@@ -315,9 +420,9 @@
           "icon": "hexproof.png",
           "description": "A permanent with hexproof can't be the target of spells or abilities your opponents control.",
           "bullets": [
-            "Only opponent spells and abilities are affected - you can still target your own hexproof permanents.",
+            "Only opponent spells and abilities are affected — you can still target your own hexproof permanents.",
             "Non-targeting effects like board wipes still affect hexproof creatures.",
-            "Aura spells on the stack don't target, so an aura entering the battlefield attached to a hexproof creature works if it wasn't cast targeting it."
+            "You can't cast an Aura spell targeting a hexproof creature. However, effects that put an Aura onto the battlefield without casting it (such as 'search your library for an Aura and attach it') bypass hexproof since no targeting occurs."
           ]
         },
         {
@@ -325,11 +430,12 @@
           "label": "Hexproof (Black)",
           "title": "Hexproof from Black",
           "icon": "hexproof_black.png",
-          "description": "A permanent with protection from black can't be blocked, targeted, dealt damage, enchanted, or equipped by black sources.",
+          "description": "This permanent can't be the target of black spells or abilities your opponents control.",
           "bullets": [
-            "Protection is color-specific - effects from other colors can still affect it.",
-            "All damage from black sources to this permanent is prevented.",
-            "Black creatures can't block this permanent, and black Auras or Equipment can't stay attached to it."
+            "Hexproof from black only blocks targeting — non-targeting black effects such as 'destroy all creatures' still affect it.",
+            "You can still target your own permanent with black spells or abilities.",
+            "It does not prevent black creatures from blocking, or black Auras from attaching through non-casting effects.",
+            "Multiple hexproof-from-[color] abilities are redundant — one instance is sufficient."
           ]
         },
         {
@@ -337,11 +443,12 @@
           "label": "Hexproof (Blue)",
           "title": "Hexproof from Blue",
           "icon": "hexproof_blue.png",
-          "description": "A permanent with protection from blue can't be blocked, targeted, dealt damage, enchanted, or equipped by blue sources.",
+          "description": "This permanent can't be the target of blue spells or abilities your opponents control.",
           "bullets": [
-            "Protection is color-specific - effects from other colors can still affect it.",
-            "All damage from blue sources to this permanent is prevented.",
-            "Blue creatures can't block this permanent, and blue Auras or Equipment can't stay attached to it."
+            "Hexproof from blue only blocks targeting — non-targeting blue effects such as 'destroy all creatures' still affect it.",
+            "You can still target your own permanent with blue spells or abilities.",
+            "It does not prevent blue creatures from blocking, or blue Auras from attaching through non-casting effects.",
+            "Multiple hexproof-from-[color] abilities are redundant — one instance is sufficient."
           ]
         },
         {
@@ -349,11 +456,12 @@
           "label": "Hexproof (Green)",
           "title": "Hexproof from Green",
           "icon": "hexproof_green.png",
-          "description": "A permanent with protection from green can't be blocked, targeted, dealt damage, enchanted, or equipped by green sources.",
+          "description": "This permanent can't be the target of green spells or abilities your opponents control.",
           "bullets": [
-            "Protection is color-specific - effects from other colors can still affect it.",
-            "All damage from green sources to this permanent is prevented.",
-            "Green creatures can't block this permanent, and green Auras or Equipment can't stay attached to it."
+            "Hexproof from green only blocks targeting — non-targeting green effects such as 'destroy all creatures' still affect it.",
+            "You can still target your own permanent with green spells or abilities.",
+            "It does not prevent green creatures from blocking, or green Auras from attaching through non-casting effects.",
+            "Multiple hexproof-from-[color] abilities are redundant — one instance is sufficient."
           ]
         },
         {
@@ -361,11 +469,12 @@
           "label": "Hexproof (Red)",
           "title": "Hexproof from Red",
           "icon": "hexproof_red.png",
-          "description": "A permanent with protection from red can't be blocked, targeted, dealt damage, enchanted, or equipped by red sources.",
+          "description": "This permanent can't be the target of red spells or abilities your opponents control.",
           "bullets": [
-            "Protection is color-specific - effects from other colors can still affect it.",
-            "All damage from red sources to this permanent is prevented.",
-            "Red creatures can't block this permanent, and red Auras or Equipment can't stay attached to it."
+            "Hexproof from red only blocks targeting — non-targeting red effects such as 'destroy all creatures' still affect it.",
+            "You can still target your own permanent with red spells or abilities.",
+            "It does not prevent red creatures from blocking, or red Auras from attaching through non-casting effects.",
+            "Multiple hexproof-from-[color] abilities are redundant — one instance is sufficient."
           ]
         },
         {
@@ -373,11 +482,12 @@
           "label": "Hexproof (White)",
           "title": "Hexproof from White",
           "icon": "hexproof_white.png",
-          "description": "A permanent with protection from white can't be blocked, targeted, dealt damage, enchanted, or equipped by white sources.",
+          "description": "This permanent can't be the target of white spells or abilities your opponents control.",
           "bullets": [
-            "Protection is color-specific - effects from other colors can still affect it.",
-            "All damage from white sources to this permanent is prevented.",
-            "White creatures can't block this permanent, and white Auras or Equipment can't stay attached to it."
+            "Hexproof from white only blocks targeting — non-targeting white effects such as 'destroy all creatures' still affect it.",
+            "You can still target your own permanent with white spells or abilities.",
+            "It does not prevent white creatures from blocking, or white Auras from attaching through non-casting effects.",
+            "Multiple hexproof-from-[color] abilities are redundant — one instance is sufficient."
           ]
         },
         {
@@ -391,6 +501,20 @@
             "Creatures with toxic or toxic X deal X poison counters in addition to normal combat damage.",
             "Poison counters persist - there's no natural way to remove them outside of specific card effects.",
             "Infect damage gives poison counters equal to the damage dealt instead of regular damage."
+          ]
+        },
+        {
+          "key": "ward",
+          "label": "Ward",
+          "title": "Ward",
+          "icon": "keyword.svg",
+          "description": "Whenever this permanent becomes the target of a spell or ability an opponent controls, counter it unless that player pays the ward cost.",
+          "bullets": [
+            "Ward triggers when any opponent's spell or ability targets the permanent — not just removal spells.",
+            "If the opponent doesn't pay the ward cost, the targeting spell or ability is countered entirely.",
+            "Ward only protects from opponents' effects — you can freely target your own permanents with ward.",
+            "Multiple ward triggers on the same permanent must each be paid separately if triggered at the same time.",
+            "Ward doesn't prevent non-targeting effects such as board wipes that say 'destroy all creatures.'"
           ]
         }
       ]
@@ -480,6 +604,19 @@
           ]
         },
         {
+          "key": "convoke",
+          "label": "Convoke",
+          "title": "Convoke",
+          "icon": "keyword.svg",
+          "description": "Your creatures can help cast this spell. Each creature you tap as you cast this spell pays for {1} or one mana of that creature's color.",
+          "bullets": [
+            "Tapping a creature for convoke is part of paying the spell's cost — it happens during casting, not as a separate action.",
+            "Creatures affected by summoning sickness can still be tapped for convoke, since it's a cost payment rather than an activated ability.",
+            "You can tap as many untapped creatures as you have, but only up to what the spell actually costs.",
+            "Convoke reduces the mana you need to pay but cannot reduce the cost below zero."
+          ]
+        },
+        {
           "key": "crew",
           "label": "Crew",
           "title": "Crew",
@@ -501,6 +638,46 @@
             "Echo checks at your upkeep, not while casting the spell.",
             "If you don't pay, you sacrifice that permanent.",
             "Echo applies once per permanent entering under your control in that window."
+          ]
+        },
+        {
+          "key": "emerge",
+          "label": "Emerge",
+          "title": "Emerge",
+          "icon": "keyword.svg",
+          "description": "You may cast a spell with emerge by sacrificing a creature and paying the emerge cost reduced by the sacrificed creature's mana value.",
+          "bullets": [
+            "The sacrificed creature's mana value reduces the emerge cost — sacrificing a higher-cost creature makes the emerge spell cheaper.",
+            "The sacrifice is part of paying the cost and happens as you cast the spell, not after it resolves.",
+            "Death triggers and sacrifice synergies from the sacrificed creature still resolve after the emerge spell resolves.",
+            "You may still pay the full mana cost of the emerge card rather than using emerge."
+          ]
+        },
+        {
+          "key": "encore",
+          "label": "Encore",
+          "title": "Encore",
+          "icon": "keyword.svg",
+          "description": "Pay the encore cost and exile this card from your graveyard: For each opponent, create a token copy of this card that attacks them this turn if able. Those tokens have haste and are sacrificed at the beginning of the next end step. Activate only as a sorcery.",
+          "bullets": [
+            "Encore is activated from the graveyard — it is not cast, so it can't be countered as a spell.",
+            "Each token attacks a different opponent, making encore especially powerful in Commander with multiple opponents.",
+            "Tokens are sacrificed at the beginning of the next end step, even if they didn't attack.",
+            "Since the original card is exiled to activate encore, it can't be reanimated from the graveyard afterward.",
+            "Encore can only be activated as a sorcery — at the start of your main phase with an empty stack."
+          ]
+        },
+        {
+          "key": "fabricate",
+          "label": "Fabricate",
+          "title": "Fabricate",
+          "icon": "keyword.svg",
+          "description": "When a permanent with fabricate N enters the battlefield, put N +1/+1 counters on it or create N 1/1 colorless Servo artifact creature tokens.",
+          "bullets": [
+            "You choose one option — counters or Servo tokens — you can't split between the two.",
+            "The choice is made when the ability resolves, after the permanent has already entered the battlefield.",
+            "Servo tokens are 1/1 colorless artifact creatures with no abilities.",
+            "Fabricate 2 gives either two +1/+1 counters on the permanent or two Servo tokens."
           ]
         },
         {
@@ -565,17 +742,96 @@
           ]
         },
         {
+          "key": "ninjutsu",
+          "label": "Ninjutsu",
+          "title": "Ninjutsu",
+          "icon": "keyword.svg",
+          "description": "Pay the ninjutsu cost and return an unblocked attacker you control to your hand: Put this card onto the battlefield from your hand tapped and attacking.",
+          "bullets": [
+            "Ninjutsu can only be activated after blockers are declared and the target creature is confirmed to be unblocked.",
+            "The deployed ninja is already attacking and deals combat damage normally, including triggering any on-attack or on-damage abilities.",
+            "Summoning sickness doesn't apply to the ninja since it entered already attacking — not via a normal declare attackers step.",
+            "The swapped-out creature returns to your hand and can be recast on a later turn."
+          ]
+        },
+        {
+          "key": "partner",
+          "label": "Partner",
+          "title": "Partner",
+          "icon": "keyword.svg",
+          "description": "Two legendary creatures with partner can both be your commanders at the same time.",
+          "bullets": [
+            "Each partner starts in the command zone and can be cast independently at any time you could normally cast your commander.",
+            "Commander tax applies to each partner separately — casting one only increases that creature's future cost.",
+            "'Partner with [name]' is a variant that only pairs with one specific named card, not any other partner creature.",
+            "Having two commanders expands the color identity available for deckbuilding.",
+            "If one partner is moved to the command zone, the other can remain on the battlefield as normal."
+          ]
+        },
+        {
+          "key": "persist",
+          "label": "Persist",
+          "title": "Persist",
+          "icon": "keyword.svg",
+          "description": "When a creature with persist dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.",
+          "bullets": [
+            "Persist only triggers if the creature had no -1/-1 counters at the time it died.",
+            "If a creature has both persist and undying, dying with no counters triggers both; the first to resolve adds a counter, preventing the second from returning it.",
+            "Removing the -1/-1 counter (for example with a proliferate reversal or counter removal) resets persist, allowing it to trigger again.",
+            "Persist is popular in Commander with sacrifice synergies since it repeatedly returns the creature to generate death triggers."
+          ]
+        },
+        {
           "key": "protection",
           "label": "Protection",
           "title": "Protection",
           "icon": "protection.png",
-          "description": "A permanent with protection from a quality can't be targeted, enchanted, damaged, or blocked by things of that quality.",
+          "description": "A permanent with protection from a quality can't be Damaged, Enchanted/Equipped, Blocked, or Targeted by things of that quality — remember the acronym D.E.B.T.",
           "bullets": [
-            "D. E. B. T.",
-            "Damage from [blah] sources is preventedEnchantments and Equipment that are [blah] can't be attached[blah] creatures can't Block itIt can't be the Target of [blah] spells or abilities from [blah] sources.",
-            "Protection is usually defined by a color, creature type, or quality such as red or creatures.",
-            "The protected permanent also can't be enchanted by effects of that quality.",
-            "Protection is a strong defensive ability and often makes a card hard to interact with."
+            "Damage from sources with that quality is prevented.",
+            "Enchantments or Equipment with that quality can't be attached to the protected permanent and fall off if they somehow end up attached.",
+            "Creatures with that quality can't block the protected creature.",
+            "The protected permanent can't be the target of spells or abilities from sources with that quality.",
+            "Protection doesn't prevent non-targeting effects — board wipes that say 'destroy all creatures' still destroy it unless they specifically target."
+          ]
+        },
+        {
+          "key": "storm",
+          "label": "Storm",
+          "title": "Storm",
+          "icon": "keyword.svg",
+          "description": "When you cast a spell with storm, copy it for each spell cast before it this turn. You may choose new targets for each copy.",
+          "bullets": [
+            "Copies resolve one by one from the top of the stack — the last copy created resolves first.",
+            "The copies are placed on the stack but are not cast, so they can't trigger storm again or be countered by spells that target spells on the stack.",
+            "Storm counts all spells cast this turn by any player, not just you.",
+            "In Commander, storm can be a game-ending combo when many spells have already been cast in one turn."
+          ]
+        },
+        {
+          "key": "undying",
+          "label": "Undying",
+          "title": "Undying",
+          "icon": "keyword.svg",
+          "description": "When a creature with undying dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.",
+          "bullets": [
+            "Undying only triggers if the creature had no +1/+1 counters at the time it died.",
+            "If a creature has both undying and persist, dying with no counters triggers both; the first to resolve adds a counter, preventing the second from returning it.",
+            "Removing the +1/+1 counter resets undying, allowing it to trigger again if the creature dies.",
+            "Undying pairs well with sacrifice outlets in Commander for repeated death triggers and enters-the-battlefield effects."
+          ]
+        },
+        {
+          "key": "unearth",
+          "label": "Unearth",
+          "title": "Unearth",
+          "icon": "keyword.svg",
+          "description": "Pay the unearth cost: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Activate only as a sorcery.",
+          "bullets": [
+            "Unearth returns the creature temporarily — it has haste and is useful for one-turn burst of value or damage.",
+            "If the creature would leave the battlefield for any reason before the end step (bounced, destroyed, exiled), it's exiled instead of going to any other zone.",
+            "Since the card is exiled after unearth, it cannot be reanimated again from the graveyard.",
+            "Unearth can only be activated as a sorcery — during your main phase with an empty stack."
           ]
         }
       ]
